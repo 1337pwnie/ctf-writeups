@@ -1,6 +1,6 @@
 # xref - 300 points
 
-* ** Cryptography **
+* **Cryptography**
 
 ## Problem
 
@@ -100,9 +100,9 @@ d=d+"i"*(16-len(d)%16)
 open('diary.ecb','wb').write(c.encrypt(d))
 ```
 This can be used to automate the decryption process, combined with the following file properties:
-- beemovie.whitespace.xor only contains whitespace characters: 0x20, 0x09, and 0x0a0d
-- special_meme.jpg.b64.xor only contains base64 characters: [a-zA-Z0-9+/]
-- diary.ecb.xor contains plaintext ascii characters encrypted in 16-byte blocks
+- `beemovie.whitespace.xor` only contains whitespace characters: `0x20`, `0x09`, and `0x0a0d`
+- `special_meme.jpg.b64.xor` only contains base64 characters: `[a-zA-Z0-9+/]`
+- `diary.ecb.xor` contains plaintext ascii characters encrypted in 16-byte blocks
 So the key could be recovered using the following code:
 
 ```python
@@ -185,7 +185,9 @@ After running the code for an hour or so, enough bytes of the key were recovered
 I only had a 32-bit virtual machine at the time, and the binary was 64 bits.
 After downloading and installing a 64-bit VM and running the binary, the key was recovered:
 
+```
 This crib drag is treacherous.
 flag{n0th1_saf3_i5_w0rth_th3_dr1ve}
+```
 
-Unfortunately, I did not manage to submit the flag since the CTF time limit was reached just when I had managed to install the new VM :/
+Unfortunately, I did not manage to submit the flag since the CTF time limit was reached just when I had managed to install the new VM :-/
